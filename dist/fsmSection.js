@@ -19,7 +19,7 @@ angular.module("fsmSection.tpl.html", []).run(["$templateCache", function($templ
 }]);
 
 'use strict';
-angular.module('directives')
+angular.module('fsmSection', [])
     .directive('fsmSection', [function () {
         return {
             restrict: 'E',
