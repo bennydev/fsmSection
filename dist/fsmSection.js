@@ -27,7 +27,7 @@ angular.module('fsmSection', [])
                 id:'@',
                 sections: '='
             },
-            templateUrl: 'fsmSection/fsmSection.tpl.html',
+            templateUrl: 'fsmSection.tpl.html',
             link: function(scope, element, attributes){
                 scope.section = scope.sections[scope.id];
                scope.next = scope.section.next;
