@@ -1,5 +1,5 @@
 'use strict';
-angular.module('directives')
+angular.module('fsmSection', [])
     .directive('fsmSection', [function () {
         return {
             restrict: 'E',
