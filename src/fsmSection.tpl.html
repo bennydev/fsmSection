@@ -1,7 +1,7 @@
 <div id="slidedown-wrapper-{{id}}" class="form-section slidedown-wrapper" ng-class="{'slidedown-open': section.status === 'OPEN'}">
     <h2 class="form-section__heading" ng-class="{'slidedown-toggle slidedown-toggle--arrow': section.status === 'OPEN' || section.status === 'ENABLED'}"
         ng-click="section.open();">
-        {{section.title | fsmTranslate}}
+        {{section.title}}
     </h2>
 
     <div class="slidedown" >

@@ -5,7 +5,7 @@ angular.module("fsmSection.tpl.html", []).run(["$templateCache", function($templ
     "<div id=\"slidedown-wrapper-{{id}}\" class=\"form-section slidedown-wrapper\" ng-class=\"{'slidedown-open': section.status === 'OPEN'}\">\n" +
     "    <h2 class=\"form-section__heading\" ng-class=\"{'slidedown-toggle slidedown-toggle--arrow': section.status === 'OPEN' || section.status === 'ENABLED'}\"\n" +
     "        ng-click=\"section.open();\">\n" +
-    "        {{section.title | fsmTranslate}}\n" +
+    "        {{section.title}}\n" +
     "    </h2>\n" +
     "\n" +
     "    <div class=\"slidedown\" >\n" +
