@@ -1,0 +1,30 @@
+{
+  "name": "fsmSection",
+  "version": "0.0.1",
+  "description": "Generic Section library",
+  "directory": "dist",
+  "main": ["fsmSection.js"],
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "Folksam",
+    "Section",
+    "angularjs",
+    "insurance"
+  ],
+  "authors": [
+    "A-Team"
+  ],
+  "license": "Folksam",
+  "homepage": "http://www.folksam.se",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "src",
+    "spec",
+    "bower.json",
+    "gruntfile.js",
+    "package.json",
+    "README.md" ]
+}
