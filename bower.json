@@ -1,6 +1,6 @@
 {
   "name": "fsmSection",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Generic Section library",
   "directory": "dist",
   "main": ["fsmSection.js"],

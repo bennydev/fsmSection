@@ -1,15 +1,12 @@
 'use strict';
-angular.module('fsmSection', [])
-    .directive('fsmSection', [function () {
+angular.module('fsmSection', ['ui.router'])
+    .directive('fsmSection', ['$state', function ($state) {
         return {
             restrict: 'E',
             scope: {
                 id:'@',
                 section: '='
             },
-            templateUrl: 'fsmSection.tpl.html',
-            link: function(scope, element, attributes){
-
-            }
+            templateUrl: 'fsmSection.tpl.html'
         };
     }]);
