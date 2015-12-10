@@ -6,9 +6,7 @@
 
     <div class="slidedown" >
         <form novalidate name="section{{id}}Form" placeholder-polyfill>
-            <ng-include src="section.template" ng-if="section.status !== 'DISABLED'"></ng-include>
-            <div>{{footer}}</div>
-            <ng-include src="'navigation/navigationButtons.tpl.html'" ng-if="section.next"></ng-include>
+            <ng-include src="section.templateUrl" ng-if="section.status !== 'DISABLED'"></ng-include>
         </form>
     </div>
 </div>

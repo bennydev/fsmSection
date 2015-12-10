@@ -5,12 +5,11 @@ angular.module('fsmSection', [])
             restrict: 'E',
             scope: {
                 id:'@',
-                sections: '='
+                section: '='
             },
             templateUrl: 'fsmSection.tpl.html',
             link: function(scope, element, attributes){
-                scope.section = scope.sections[scope.id];
-               scope.next = scope.section.next;
+
             }
         };
     }]);

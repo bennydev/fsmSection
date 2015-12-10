@@ -10,9 +10,7 @@ angular.module("fsmSection.tpl.html", []).run(["$templateCache", function($templ
     "\n" +
     "    <div class=\"slidedown\" >\n" +
     "        <form novalidate name=\"section{{id}}Form\" placeholder-polyfill>\n" +
-    "            <ng-include src=\"section.template\" ng-if=\"section.status !== 'DISABLED'\"></ng-include>\n" +
-    "            <div>{{footer}}</div>\n" +
-    "            <ng-include src=\"'navigation/navigationButtons.tpl.html'\" ng-if=\"section.next\"></ng-include>\n" +
+    "            <ng-include src=\"section.templateUrl\" ng-if=\"section.status !== 'DISABLED'\"></ng-include>\n" +
     "        </form>\n" +
     "    </div>\n" +
     "</div>");
@@ -25,12 +23,11 @@ angular.module('fsmSection', [])
             restrict: 'E',
             scope: {
                 id:'@',
-                sections: '='
+                section: '='
             },
             templateUrl: 'fsmSection.tpl.html',
             link: function(scope, element, attributes){
-                scope.section = scope.sections[scope.id];
-               scope.next = scope.section.next;
+
             }
         };
     }]);
