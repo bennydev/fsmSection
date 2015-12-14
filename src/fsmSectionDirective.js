@@ -11,7 +11,7 @@ angular.module('fsmSection', ['ui.router'])
             link: function(scope){
                 scope.openSection = function(){
                     if(scope.section.status !== 'DISABLED') {
-                        SectionService.openSection(scope.section.id);
+                        SectionService.openSection(scope.id);
                     }
                 }
             }
