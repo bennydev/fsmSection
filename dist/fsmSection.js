@@ -4,7 +4,7 @@ angular.module("fsmSection.tpl.html", []).run(["$templateCache", function($templ
   $templateCache.put("fsmSection.tpl.html",
     "<div id=\"slidedown-wrapper-{{id}}\" class=\"form-section slidedown-wrapper\" ng-class=\"{'slidedown-open': section.status === 'OPEN'}\">\n" +
     "    <h2 class=\"form-section__heading\" ng-class=\"{'slidedown-toggle slidedown-toggle--arrow': section.status === 'OPEN' || section.status === 'ENABLED'}\"\n" +
-    "        ng-click=\"section.open();\">\n" +
+    "        ng-click=\"openSection();\">\n" +
     "        {{section.title | translate}}\n" +
     "    </h2>\n" +
     "\n" +
@@ -18,13 +18,30 @@ angular.module("fsmSection.tpl.html", []).run(["$templateCache", function($templ
 
 'use strict';
 angular.module('fsmSection', ['ui.router'])
-    .directive('fsmSection', ['$state', function ($state) {
+    .directive('fsmSection', ['SectionService', function (SectionService) {
         return {
             restrict: 'E',
             scope: {
                 id:'@',
                 section: '='
             },
-            templateUrl: 'fsmSection.tpl.html'
+            templateUrl: 'fsmSection.tpl.html',
+            link: function(scope){
+                scope.openSection = function(){
+                    if(section.status !== 'DISABLED') {
+                        SectionService.openSection(scope.section.id);
+                    }
+                }
+            }
         };
-    }]);
+    }])
+    .factory('SectionService', [function(){
+    var service = {
+        openSection: openSection
+    };
+    return service;
+
+    function openSection(id){
+
+    }
+}]);
