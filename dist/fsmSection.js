@@ -10,7 +10,7 @@ angular.module("fsmSection.tpl.html", []).run(["$templateCache", function($templ
     "\n" +
     "    <div class=\"slidedown\" >\n" +
     "        <form novalidate name=\"section{{id}}Form\" placeholder-polyfill>\n" +
-    "            <ng-include src=\"section.templateUrl\" ng-if=\"section.status !== 'DISABLED'\"></ng-include>\n" +
+    "            <ng-include src=\"section.templateUrl\" ng-if=\"section.status === 'OPEN'\"></ng-include>\n" +
     "        </form>\n" +
     "    </div>\n" +
     "</div>");
