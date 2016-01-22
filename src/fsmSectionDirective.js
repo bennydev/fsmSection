@@ -19,11 +19,10 @@ angular.module('fsmSection', ['ui.router'])
     }])
     .factory('SectionService', [function(){
     var service = {
-        openSection: openSection
+        openSection: openSection,
+        sectionNames : []
     };
     return service;
-
     function openSection(id){
-
     }
 }]);
