@@ -13,6 +13,7 @@ angular.module("fsmSection.tpl.html", []).run(["$templateCache", function($templ
     "            <ng-include src=\"section.templateUrl\" ng-if=\"section.status === 'OPEN'\"></ng-include>\n" +
     "        </form>\n" +
     "    </div>\n" +
+    "    <!--dummy comment-->\n" +
     "</div>");
 }]);
 
